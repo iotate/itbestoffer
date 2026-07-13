@@ -1,0 +1,484 @@
+/**
+ * 莱茵蓝 (Rhine Blue) 主题色
+ * 主色调: #003366 (深蓝)
+ * 统一使用蓝色系，避免蓝绿混搭
+ */
+
+:root {
+  /* 莱茵蓝主题色 - 统一蓝色系 */
+  --rhine-blue: #003366;
+  --rhine-blue-light: #004488;
+  --rhine-blue-lighter: #1a5fb4;
+  --rhine-blue-lightest: #3584e4;
+  
+  /* VitePress 主题色覆盖 */
+  --vp-c-brand-1: var(--rhine-blue);
+  --vp-c-brand-2: var(--rhine-blue-light);
+  --vp-c-brand-3: var(--rhine-blue-lighter);
+  --vp-c-brand-soft: rgba(0, 51, 102, 0.14);
+  
+  /* 首页英雄区域渐变 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #003366 0%, #1a5fb4 100%);
+  
+  /* 内容区域宽度 */
+  --vp-layout-max-width: 1440px;
+  
+  /* 侧边栏宽度 */
+  --vp-sidebar-width: 260px;
+}
+
+/* ===== 首页英雄区域 - 左对齐，文字不换行 ===== */
+
+.VPHero {
+  padding: 64px 48px;
+}
+
+.VPHero .container {
+  max-width: var(--vp-layout-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.VPHero .main {
+  text-align: left;
+  max-width: 900px;
+}
+
+.VPHero .name {
+  white-space: nowrap;
+}
+
+.VPHero .text {
+  white-space: nowrap;
+}
+
+.VPHero .tagline {
+  white-space: nowrap;
+}
+
+.VPHero .actions {
+  justify-content: flex-start;
+}
+
+/* ===== 首页特性区域 - 左对齐 ===== */
+
+.VPFeatures {
+  padding: 48px;
+}
+
+.VPFeatures .container {
+  max-width: var(--vp-layout-max-width);
+  margin: 0 auto;
+}
+
+.VPFeatures .items {
+  justify-content: flex-start;
+}
+
+/* ===== 导航栏样式 - 移除 backdrop-filter ===== */
+
+.VPNav {
+  background-color: var(--rhine-blue) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.VPNavBar {
+  background-color: var(--rhine-blue) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.VPNavBar .container {
+  max-width: var(--vp-layout-max-width);
+  margin: 0 auto;
+  background-color: transparent !important;
+}
+
+.VPNavBar .content {
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* 导航栏标题 - Logo 和标题同一行 */
+.VPNavBarTitle {
+  background-color: transparent !important;
+}
+
+.VPNavBarTitle.has-sidebar {
+  width: auto !important;
+  min-width: auto !important;
+  max-width: none !important;
+}
+
+.VPNavBarTitle a.title {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+}
+
+.VPNavBarTitle .logo {
+  height: 24px !important;
+  width: auto !important;
+  margin-right: 0 !important;
+  flex-shrink: 0 !important;
+  vertical-align: middle !important;
+}
+
+/* 导航栏菜单项 - 统一白色文字 */
+.VPNavBarMenu {
+  background-color: transparent !important;
+}
+
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup {
+  background-color: transparent !important;
+}
+
+/* 强制所有导航链接为白色 - 包括首页和附录 */
+.VPNavBarMenuLink,
+.VPNavBarMenuLink *,
+.VPNavBarMenuLink a,
+.VPNavBarMenuLink a:link,
+.VPNavBarMenuLink a:visited,
+.VPNavBarMenuLink a:hover,
+.VPNavBarMenuLink a:active,
+.VPNavBarMenuLink span,
+.VPNavBarMenuLink .text,
+.VPNavBarMenuGroup .text,
+.VPNavBarMenuGroup .button .text {
+  color: #ffffff !important;
+}
+
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuLink:hover a,
+.VPNavBarMenuLink:hover span,
+.VPNavBarMenuLink:hover .text,
+.VPNavBarMenuGroup:hover .text,
+.VPNavBarMenuGroup:hover .button .text {
+  color: #ffffff !important;
+}
+
+/* 导航栏标题区域 - 更宽，与侧边栏宽度一致 */
+.VPNavBarTitle {
+  padding: 0 24px;
+  width: var(--vp-sidebar-width);
+  flex-shrink: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.VPNavBarTitle .title {
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Logo 和标题同一行 */
+.VPNavBarTitle .logo {
+  margin-right: 0;
+}
+
+.vp-nav-bar-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 导航栏链接 - 强制白色，包括首页和附录 */
+.VPNavBarMenuLink a,
+.VPNavBarMenuLink a:link,
+.VPNavBarMenuLink a:visited,
+.VPNavBarMenuLink a:hover,
+.VPNavBarMenuLink a:active,
+.vp-navbar-menu-link,
+.vp-navbar-menu-link * {
+  color: #ffffff !important;
+}
+
+/* 下拉菜单按钮 */
+.VPNavBarMenuGroup .button {
+  background-color: transparent !important;
+}
+
+.VPNavBarMenuGroup .caret {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* 下拉菜单弹出层 */
+.VPFlyout .menu {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.VPFlyout .menu .link {
+  color: var(--rhine-blue) !important;
+}
+
+.VPFlyout .menu .link:hover {
+  color: var(--rhine-blue-light) !important;
+  background-color: rgba(0, 51, 102, 0.05) !important;
+}
+
+.VPFlyout .menu .group-title {
+  color: #64748b !important;
+}
+
+/* ===== 侧边栏样式 ===== */
+
+.VPSidebar {
+  width: var(--vp-sidebar-width);
+}
+
+/* 侧边栏滚动条 - 更细 */
+.VPSidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.VPSidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+  background: var(--rhine-blue-light);
+  border-radius: 2px;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--rhine-blue);
+}
+
+.VPSidebar .link.active {
+  color: var(--rhine-blue) !important;
+  border-left-color: var(--rhine-blue) !important;
+}
+
+.VPSidebar .link:hover {
+  color: var(--rhine-blue-light);
+}
+
+/* ===== 内容区域宽度 ===== */
+
+.VPDoc .container {
+  max-width: var(--vp-layout-max-width);
+}
+
+/* 右侧 aside 大纲导航 - 更窄 */
+.VPDoc.has-aside .content {
+  padding-right: 32px;
+}
+
+.VPDoc.has-aside .aside {
+  display: none;
+}
+
+/* 如果需要显示 aside，取消上面的 display: none，使用下面的样式
+.VPDoc.has-aside .aside {
+  width: 180px !important;
+  flex-shrink: 0;
+  padding-left: 24px;
+}
+
+.VPDoc.has-aside .aside-container {
+  width: 180px !important;
+}
+*/
+
+.VPDoc .content-container {
+  max-width: 100% !important;
+}
+
+.VPDoc .content {
+  max-width: 100%;
+  padding: 0 48px;
+}
+
+/* ===== 文章内容样式 ===== */
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  color: var(--rhine-blue);
+}
+
+.vp-doc h1 {
+  border-bottom-color: var(--rhine-blue);
+}
+
+.vp-doc a {
+  color: var(--rhine-blue);
+}
+
+.vp-doc a:hover {
+  color: var(--rhine-blue-lighter);
+}
+
+/* ===== 分页导航 ===== */
+
+.VPDocFooter {
+  padding-bottom: 48px;
+  margin-top: 48px;
+}
+
+.VPDocFooter .pager-link:hover .title {
+  color: var(--rhine-blue);
+}
+
+/* ===== 页脚 ===== */
+
+.VPFooter {
+  background-color: var(--rhine-blue);
+  color: #ffffff;
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== 首页特性卡片 ===== */
+
+.VPFeature .title {
+  color: var(--rhine-blue);
+}
+
+.VPFeature:hover .title {
+  color: var(--rhine-blue-light);
+}
+
+/* ===== 首页英雄标题 ===== */
+
+.VPHero .name {
+  background: linear-gradient(135deg, #003366 0%, #1a5fb4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== 按钮样式 ===== */
+
+.VPButton.brand {
+  background-color: var(--rhine-blue);
+  border-color: var(--rhine-blue);
+}
+
+.VPButton.brand:hover {
+  background-color: var(--rhine-blue-light);
+  border-color: var(--rhine-blue-light);
+}
+
+.VPButton.alt {
+  background-color: transparent;
+  border-color: var(--rhine-blue);
+  color: var(--rhine-blue);
+}
+
+.VPButton.alt:hover {
+  background-color: var(--rhine-blue);
+  color: #ffffff;
+}
+
+/* ===== 提示框 ===== */
+
+.custom-block.tip {
+  border-color: var(--rhine-blue);
+}
+
+.custom-block.tip .custom-block-title {
+  color: var(--rhine-blue);
+}
+
+/* ===== 全局滚动条 ===== */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rhine-blue-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rhine-blue);
+}
+
+/* ===== 表格样式 ===== */
+
+.vp-doc th {
+  background-color: var(--rhine-blue);
+  color: #ffffff;
+}
+
+.vp-doc tr:nth-child(even) {
+  background-color: rgba(0, 51, 102, 0.03);
+}
+
+/* ===== 引用块样式 ===== */
+
+.vp-doc blockquote {
+  border-left-color: var(--rhine-blue);
+  background-color: rgba(0, 51, 102, 0.05);
+}
+
+/* ===== 响应式调整 ===== */
+
+@media (max-width: 960px) {
+  .VPHero {
+    padding: 48px 24px;
+  }
+  
+  .VPHero .container {
+    align-items: center;
+  }
+  
+  .VPHero .main {
+    text-align: center;
+  }
+  
+  .VPHero .name,
+  .VPHero .text,
+  .VPHero .tagline {
+    white-space: normal;
+  }
+  
+  .VPHero .actions {
+    justify-content: center;
+  }
+  
+  .VPFeatures {
+    padding: 48px 24px;
+  }
+  
+  .VPFeatures .items {
+    justify-content: center;
+  }
+  
+  .VPDoc .content {
+    padding: 0 24px;
+  }
+  
+  .VPDoc .content-container {
+    max-width: 100%;
+  }
+}
