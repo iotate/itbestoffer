@@ -40,4 +40,4 @@ npm run build
 
 ## License
 
-Copyright © 2025 ByteOffer
+Copyright © 2025 舟游AI国

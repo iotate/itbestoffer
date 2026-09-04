@@ -127,7 +127,7 @@ export default defineConfig({
     
     footer: {
       message: '计算机专业职业发展指北',
-      copyright: 'Copyright © 2025 ByteOffer'
+      copyright: 'Copyright © 2025 舟游AI国'
     },
     
     docFooter: {
